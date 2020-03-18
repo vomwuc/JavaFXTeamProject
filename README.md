@@ -1,6 +1,7 @@
 # JavaFXTeamProject
 
 In order to run your project through intelij
+
 --DO NOT SKIP THIS STEP--   First try to run Main class. --DO NOT SKIP THIS STEP--
 
 You will fail.
