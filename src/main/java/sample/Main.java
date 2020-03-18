@@ -15,7 +15,7 @@ public class Main extends Application {
         final double APPLICATION_SCALE = 5/6.0;
 
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/sample.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Roster");
         primaryStage.setScene(new Scene(root,
                 Screen.getPrimary().getBounds().getWidth() * APPLICATION_SCALE ,
                 Screen.getPrimary().getBounds().getHeight() * APPLICATION_SCALE,
