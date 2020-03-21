@@ -1,25 +1,33 @@
-package sample;
+package home;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.paint.Color;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
+    private double x, y;
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        final double APPLICATION_SCALE = 5/6.0;
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Home.fxml"));
+        primaryStage.setScene(new Scene(root));
+        //set stage borderless
+        primaryStage.initStyle(StageStyle.UNDECORATED);
 
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/sample.fxml"));
-        primaryStage.setTitle("Roster");
-        primaryStage.setScene(new Scene(root,
-                Screen.getPrimary().getBounds().getWidth() * APPLICATION_SCALE ,
-                Screen.getPrimary().getBounds().getHeight() * APPLICATION_SCALE,
-                Color.grayRgb(25)));
+        //drag it here
+        root.setOnMousePressed(event -> {
+            x = event.getSceneX();
+            y = event.getSceneY();
+        });
+        root.setOnMouseDragged(event -> {
+
+            primaryStage.setX(event.getScreenX() - x);
+            primaryStage.setY(event.getScreenY() - y);
+
+        });
         primaryStage.show();
     }
 
