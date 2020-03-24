@@ -1,0 +1,62 @@
+#root {
+    -fx-background-color:  rgb(44, 52, 75);
+    -fx-border-radius: 20;
+    -fx-padding: 10 10 10 10;
+    -fx-background-radius: 20;
+}
+
+#bp {
+    -fx-background-color: rgb(44, 52, 75);
+
+}
+
+#usrName {
+    -fx-background-color:  rgb(44, 52, 75);
+    -fx-padding: 10 10 10 10;
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+}
+
+#btnLogin {
+    -fx-background-radius: 30, 30, 29, 28;
+    /*-fx-padding: 3px 10px 3px 10px;*/
+    -fx-background-color: rgb(44, 52, 75);
+    -fx-border-color: white;
+    -fx-border-radius: 20;
+    -fx-text-fill: white;
+
+}
+
+#btnAdminLogin {
+    -fx-background-color: rgb(44, 52, 75);
+    -fx-text-fill: white;
+}
+
+#txtField {
+    -fx-background-image: url("/icons/login.png");
+    -fx-background-size: 25;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right center;
+}
+
+#password {
+    -fx-background-color:  rgb(44, 52, 75);
+    -fx-padding: 10 10 10 10;
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+}
+
+#txtPassword {
+    -fx-background-image: url("/icons/psswrd.png");
+    -fx-background-size: 25;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right center;
+}
+
+#text {
+    -fx-background-color:  rgb(44, 52, 75);
+    -fx-padding: 10 10 10 10;
+    -fx-text-fill: white;
+}

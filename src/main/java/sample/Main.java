@@ -21,6 +21,8 @@ public class Main extends Application {
                 Screen.getPrimary().getBounds().getHeight() * APPLICATION_SCALE,
                 Color.grayRgb(25)));
         primaryStage.show();
+
+
     }
 
 
