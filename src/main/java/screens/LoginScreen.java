@@ -7,9 +7,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -49,8 +47,6 @@ public class LoginScreen extends Application {
         //Implementing Nodes for GridPane
         Label lblUserName = new Label("מספר אישי");
         final TextField txtUserName = new TextField();
-//        Label lblPassword = new Label("Password");
-//        final PasswordField pf = new PasswordField();
         Button btnLogin = new Button("התחברות");
         final Label lblMessage = new Label();
         Button btnAdminLogin = new Button("אחראי תורנויות? לחץ כאן");
@@ -58,13 +54,13 @@ public class LoginScreen extends Application {
         gridPane.add(lblUserName, 2, 0);
         GridPane.setHalignment(lblUserName, HPos.RIGHT);
         gridPane.add(txtUserName, 1, 0);
-//        gridPane.add(lblPassword, 0, 1);
-//        gridPane.add(pf, 1, 1);
+
         gridPane.add(btnLogin, 2, 2);
         gridPane.add(lblMessage, 2, 4);
         gridPane.add(btnAdminLogin, 2,3);
 
         Text text = new Text("מערכת תורנויות");
+        text.setFill(Color.WHITE);
         text.setFont(Font.font("Tahoma", FontWeight.BOLD, 28));
 
         hb.getChildren().add(text);
@@ -89,6 +85,16 @@ public class LoginScreen extends Application {
                 lblMessage.setTextFill(Color.RED);
             }
             txtUserName.setText("");
+        });
+
+        Stage window = new Stage();
+
+
+        btnAdminLogin.setOnAction((EventHandler) event -> {
+            AdminLoginScreen a = new AdminLoginScreen();
+            primaryStage.setScene(a.getScene(primaryStage));
+            primaryStage.show();
+
         });
 
         bp.setTop(hb);

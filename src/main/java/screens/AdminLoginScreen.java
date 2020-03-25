@@ -19,20 +19,14 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
-public class AdminLoginScreen extends Application {
+import javafx.fxml.Initializable;
+public class AdminLoginScreen {
     String user = "JavaFX2";
     String pw = "password";
     String checkUser, checkPw;
 
-    public static void main(String[] args) {
-        launch(args);
-    }
 
-    @Override
-    public void start(Stage primaryStage) {
-        primaryStage.setTitle("מערכת לוח תורנויות");
-
+    public Scene getScene(Stage primaryStage) {
         BorderPane bp = new BorderPane();
         bp.setPadding(new Insets(10,50,50,50));
 
@@ -96,12 +90,6 @@ public class AdminLoginScreen extends Application {
 
         Scene scene = new Scene(bp);
         scene.getStylesheets().add(getClass().getClassLoader().getResource("login.css").toExternalForm());
-        primaryStage.setScene(scene);
-        primaryStage.titleProperty().bind(
-                scene.widthProperty().asString().
-                        concat(" : ").
-                        concat(scene.heightProperty().asString()));
-        //primaryStage.setResizable(false);
-        primaryStage.show();
+        return scene;
     }
 }
