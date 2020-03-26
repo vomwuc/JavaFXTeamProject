@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="663.0" style="-fx-background-color: #2C344B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Home">
+   <children>
+      <VBox alignment="TOP_RIGHT" layoutX="452.0" layoutY="24.0" prefHeight="265.0" prefWidth="211.0" style="-fx-background-color: #2C344B;">
+         <children>
+            <Button contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="51.0" prefWidth="106.0" style="-fx-background-color: #2C344B;" text="בית" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Alef Regular" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/house.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-color: #2C344B;" text="אילוצים" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Alef Regular" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/thumbtack.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="51.0" prefWidth="132.0" style="-fx-background-color: #2C344B;" text="חיפוש" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Alef Regular" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/loupe%20(2).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="51.0" prefWidth="141.0" style="-fx-background-color: #2C344B;" text="מודעות" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Alef Regular" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/email.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Text fill="WHITE" layoutX="388.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="חיפוש" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="415.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="סוג תורנות">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="354.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="שם">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="248.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="תאריך">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="149.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="דרגה">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <CheckBox alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="35.0" layoutY="70.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="סופ&quot;ש" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <DatePicker layoutX="214.0" layoutY="80.0" prefHeight="0.0" prefWidth="106.0" />
+      <ComboBox layoutX="124.0" layoutY="80.0" prefHeight="25.0" prefWidth="80.0" />
+      <TextField layoutX="327.0" layoutY="80.0" prefHeight="25.0" prefWidth="74.0" />
+      <ComboBox layoutX="410.0" layoutY="80.0" prefHeight="19.0" prefWidth="74.0" />
+      <TableView layoutX="35.0" layoutY="126.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="451.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="סוג תורנות" />
+          <TableColumn prefWidth="75.0" text="שם" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
