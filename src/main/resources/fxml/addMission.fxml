@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="663.0" style="-fx-background-color: #2C344B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Home">
+<AnchorPane prefHeight="400.0" prefWidth="663.0" style="-fx-background-color: #2C344B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <VBox alignment="TOP_RIGHT" layoutX="452.0" layoutY="25.0" prefHeight="265.0" prefWidth="211.0" style="-fx-background-color: #2C344B;">
          <children>
@@ -82,8 +82,8 @@
             <ComboBox nodeOrientation="RIGHT_TO_LEFT" prefWidth="150.0" promptText="בחר" />
          </children>
       </VBox>
-      <TextField alignment="TOP_RIGHT" layoutX="105.0" layoutY="93.0" promptText="אוטומטי" />
-      <TextField alignment="CENTER_RIGHT" layoutX="105.0" layoutY="129.0" promptText="אוטומטי" />
+      <TextField alignment="TOP_RIGHT" editable="false" layoutX="105.0" layoutY="93.0" promptText="אוטומטי" />
+      <TextField alignment="CENTER_RIGHT" editable="false" layoutX="105.0" layoutY="129.0" promptText="אוטומטי" />
       <Text fill="WHITE" layoutX="161.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="תאריך סיום:">
          <font>
             <Font size="18.0" />
