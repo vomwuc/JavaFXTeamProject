@@ -14,8 +14,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         final double APPLICATION_SCALE = 5/6.0;
 
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/addMission.fxml"));
-        primaryStage.setTitle("Roster");
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/addConstraint.fxml"));
+        primaryStage.setTitle("Missions");
         primaryStage.setScene(new Scene(root,
                 Screen.getPrimary().getBounds().getWidth() * APPLICATION_SCALE ,
                 Screen.getPrimary().getBounds().getHeight() * APPLICATION_SCALE,

@@ -50,7 +50,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="51.0" prefWidth="141.0" style="-fx-background-color: #2C344B;" text="מודעות" textAlignment="CENTER" textFill="WHITE">
+            <Button alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="51.0" prefWidth="141.0" style="-fx-background-color: #2C344B;" text="מודעות" textAlignment="CENTER" textFill="WHITE" underline="true">
                <font>
                   <Font name="Alef Regular" size="24.0" />
                </font>
