@@ -23,7 +23,7 @@
                     <graphic>
                         <ImageView fitHeight="32.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../icons/house.png" />
+                                <Image url="@../../icons/house.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -35,7 +35,7 @@
                     <graphic>
                         <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../icons/thumbtack.png" />
+                                <Image url="@../../icons/thumbtack.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -47,7 +47,7 @@
                     <graphic>
                         <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../icons/loupe (2).png" />
+                                <Image url="@../../icons/loupe (2).png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -59,7 +59,7 @@
                     <graphic>
                         <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../icons/email.png" />
+                                <Image url="@../../icons/email.png" />
                             </image>
                         </ImageView>
                     </graphic>
