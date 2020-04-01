@@ -1,5 +1,7 @@
 package screens;
 
+import Utils.LoginUtils;
+import Utils.User;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.geometry.HPos;
@@ -21,10 +23,11 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.fxml.Initializable;
 public class AdminLoginScreen {
-    String user = "JavaFX2";
+    String user = "J";
     String pw = "password";
     String checkUser, checkPw;
 
+    LoginUtils loginUtils = new LoginUtils();
 
     public Scene getScene(Stage primaryStage) {
         BorderPane bp = new BorderPane();
@@ -73,10 +76,13 @@ public class AdminLoginScreen {
 
         btnLogin.setOnAction((EventHandler) event -> {
             checkUser = txtUserName.getText().toString();
-//            checkPw = pf.getText().toString();
-            if(checkUser.equals(user) && checkPw.equals(pw)){
+            checkPw = pf.getText().toString();
+            if(checkUser.equals(user)){
                 lblMessage.setText("Congratulations!");
                 lblMessage.setTextFill(Color.GREEN);
+                User.getInstacne().setPersonalNumber(checkUser);
+                User.getInstacne().setAdmin(true);
+                loginUtils.moveToHomePage(primaryStage);
             }
             else{
                 lblMessage.setText("Incorrect user or pw.");

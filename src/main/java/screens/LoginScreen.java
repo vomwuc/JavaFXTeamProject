@@ -1,9 +1,14 @@
 package screens;
 
+import Utils.LoginUtils;
+import Utils.User;
 import javafx.application.Application;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
+import javafx.geometry.NodeOrientation;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -15,13 +20,17 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
-public class LoginScreen extends Application {
+import java.awt.*;
+import java.io.IOException;
 
+public class LoginScreen extends Application {
     String user = "JavaFX2";
-    String pw = "password";
-    String checkUser, checkPw;
+    String checkUser;
+
+    LoginUtils loginUtils = new LoginUtils();
 
     public static void main(String[] args) {
         launch(args);
@@ -32,15 +41,15 @@ public class LoginScreen extends Application {
         primaryStage.setTitle("מערכת לוח תורנויות");
 
         BorderPane bp = new BorderPane();
-        bp.setPadding(new Insets(10,50,50,50));
+        bp.setPadding(new Insets(10, 50, 50, 50));
 
         //Adding HBox
         HBox hb = new HBox();
-        hb.setPadding(new Insets(20,20,20,30));
+        hb.setPadding(new Insets(20, 20, 20, 30));
 
         //Adding GridPane
         GridPane gridPane = new GridPane();
-        gridPane.setPadding(new Insets(20,20,20,20));
+        gridPane.setPadding(new Insets(20, 20, 20, 20));
         gridPane.setHgap(5);
         gridPane.setVgap(5);
 
@@ -57,7 +66,7 @@ public class LoginScreen extends Application {
 
         gridPane.add(btnLogin, 2, 2);
         gridPane.add(lblMessage, 2, 4);
-        gridPane.add(btnAdminLogin, 2,3);
+        gridPane.add(btnAdminLogin, 2, 3);
 
         Text text = new Text("מערכת תורנויות");
         text.setFill(Color.WHITE);
@@ -76,11 +85,12 @@ public class LoginScreen extends Application {
         btnLogin.setOnAction((EventHandler) event -> {
             checkUser = txtUserName.getText().toString();
 //            checkPw = pf.getText().toString();
-            if(checkUser.equals(user) && checkPw.equals(pw)){
+            if (checkUser.equals(user)) {
                 lblMessage.setText("Congratulations!");
                 lblMessage.setTextFill(Color.GREEN);
-            }
-            else{
+//                User.getInstacne().setPersonalNumber(checkUser);
+                loginUtils.moveToHomePage(primaryStage);
+            } else {
                 lblMessage.setText("Incorrect user or pw.");
                 lblMessage.setTextFill(Color.RED);
             }
@@ -100,6 +110,8 @@ public class LoginScreen extends Application {
         bp.setTop(hb);
         bp.setCenter(gridPane);
 
+        bp.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT);
+
         Scene scene = new Scene(bp);
         scene.getStylesheets().add(getClass().getClassLoader().getResource("login.css").toExternalForm());
         primaryStage.setScene(scene);
@@ -107,7 +119,6 @@ public class LoginScreen extends Application {
                 scene.widthProperty().asString().
                         concat(" : ").
                         concat(scene.heightProperty().asString()));
-        //primaryStage.setResizable(false);
         primaryStage.show();
     }
 }

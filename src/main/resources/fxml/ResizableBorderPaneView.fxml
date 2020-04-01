@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import com.jfoenix.controls.JFXHamburger?>
+        <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<fx:root fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" type="BorderPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <AnchorPane fx:id="topAnchor" maxWidth="1.7976931348623157E308" style="-fx-background-color: #999999;" BorderPane.alignment="CENTER">
+            <children>
+                <JFXHamburger fx:id="hamburger" alignment="CENTER_LEFT" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0" />
+            </children></AnchorPane>
+    </top>
+    <left>
+        <AnchorPane fx:id="leftAnchor" maxHeight="1.7976931348623157E308" style="-fx-background-color: #FF0000;" BorderPane.alignment="CENTER" />
+    </left>
+    <center>
+        <AnchorPane fx:id="centerAnchor" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="200.0" minWidth="200.0" style="-fx-background-color: #454545;" BorderPane.alignment="CENTER_LEFT" />
+    </center>
+    <right>
+        <AnchorPane fx:id="rightAnchor" maxHeight="1.7976931348623157E308" style="-fx-background-color: #00FF00;" BorderPane.alignment="CENTER_RIGHT" />
+    </right>
+    <bottom>
+        <AnchorPane fx:id="bottomAnchor" maxWidth="1.7976931348623157E308" style="-fx-background-color: #0000FF;" BorderPane.alignment="CENTER" />
+    </bottom>
+</fx:root>
