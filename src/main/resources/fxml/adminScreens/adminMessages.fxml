@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="663.0" style="-fx-background-color: #2C344B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
@@ -47,7 +50,7 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button fx:id="adminMessage" alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#adminMessagePage" prefHeight="51.0" prefWidth="141.0" style="-fx-background-color: #2C344B;" text="מודעות" textAlignment="CENTER" textFill="WHITE">
+                <Button fx:id="adminMessage" alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#adminMessagePage" prefHeight="51.0" prefWidth="141.0" style="-fx-background-color: #2C344B;" text="מודעות" textAlignment="CENTER" textFill="WHITE" underline="true">
                     <font>
                         <Font name="Alef Regular" size="24.0" />
                     </font>
@@ -59,7 +62,7 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button fx:id="editMission" alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#editMissionPage" prefHeight="51.0" prefWidth="237.0" style="-fx-background-color: #2C344B;" text="עריכת תורנות" textAlignment="CENTER" textFill="WHITE" underline="true">
+                <Button fx:id="editMission" alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#editMissionPage" prefHeight="51.0" prefWidth="237.0" style="-fx-background-color: #2C344B;" text="עריכת תורנות" textAlignment="CENTER" textFill="WHITE">
                     <font>
                         <Font name="Alef Regular" size="24.0" />
                     </font>
@@ -73,5 +76,14 @@
                 </Button>
             </children>
         </VBox>
+        <Text fill="WHITE" layoutX="388.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="מודעות" underline="true">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <ScrollPane layoutX="31.0" layoutY="90.0" prefHeight="273.0" prefWidth="432.0" vbarPolicy="ALWAYS" />
+        <Button layoutX="31.0" layoutY="55.0" mnemonicParsing="false" text="שלח" />
+        <TextField alignment="TOP_RIGHT" layoutX="79.0" layoutY="55.0" prefHeight="25.0" prefWidth="384.0" promptText="כתוב את ההודעה שלך כאן" />
+        <Button layoutX="209.0" layoutY="369.0" mnemonicParsing="false" style="-fx-background-color: #fab285" text="מחק מודעה" />
     </children>
 </AnchorPane>

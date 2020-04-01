@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class AddMissionController implements Initializable {
 
     @FXML
     public Button search;
@@ -27,10 +27,6 @@ public class Controller implements Initializable {
     public Button addMission;
     @FXML
     public Button editMission;
-    @FXML
-    public Button adminSearch;
-    @FXML
-    public Button adminMessages;
 
     @FXML
     private Button home;
@@ -53,21 +49,9 @@ public class Controller implements Initializable {
         rootPane.getChildren().setAll(pane);
     }
 
-    public void adminSearchPage(ActionEvent event) throws IOException {
-//        stage = (Stage) rootPane.getScene().getWindow();
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/adminScreens/adminSearch.fxml"));
-        rootPane.getChildren().setAll(pane);
-    }
-
     public void messagePage(ActionEvent event) throws IOException {
 //        stage = (Stage) rootPane.getScene().getWindow();
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/userScreens/messages.fxml"));
-        rootPane.getChildren().setAll(pane);
-    }
-
-    public void adminMessagePage(ActionEvent event) throws IOException {
-//        stage = (Stage) rootPane.getScene().getWindow();
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/adminScreens/adminMessages.fxml"));
         rootPane.getChildren().setAll(pane);
     }
 
@@ -79,19 +63,19 @@ public class Controller implements Initializable {
 
     public void editConstraintPage(ActionEvent event) throws IOException {
 //        stage = (Stage) rootPane.getScene().getWindow();
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/userScreens/editConstraint.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/userScreens/addConstraint.fxml"));
         rootPane.getChildren().setAll(pane);
     }
 
     public void addMissionPage(ActionEvent event) throws IOException {
 //        stage = (Stage) rootPane.getScene().getWindow();
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/adminScreens/addMission.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/userScreens/addMission.fxml"));
         rootPane.getChildren().setAll(pane);
     }
 
     public void editMissionPage(ActionEvent event) throws IOException {
 //        stage = (Stage) rootPane.getScene().getWindow();
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/adminScreens/editMission.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/userScreens/editMission.fxml"));
         rootPane.getChildren().setAll(pane);
     }
 

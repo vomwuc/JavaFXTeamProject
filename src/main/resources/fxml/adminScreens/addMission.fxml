@@ -13,11 +13,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="663.0" style="-fx-background-color: #2C344B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="663.0" style="-fx-background-color: #2C344B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
         <VBox alignment="TOP_RIGHT" layoutX="452.0" layoutY="25.0" prefHeight="265.0" prefWidth="211.0" style="-fx-background-color: #2C344B;">
             <children>
-                <Button contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="51.0" prefWidth="106.0" style="-fx-background-color: #2C344B;" text="בית" textAlignment="RIGHT" textFill="WHITE">
+                <Button fx:id="home" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#display" prefHeight="51.0" prefWidth="106.0" style="-fx-background-color: #2C344B;" text="בית" textAlignment="RIGHT" textFill="WHITE">
                     <font>
                         <Font name="Alef Regular" size="24.0" />
                     </font>
@@ -29,7 +29,7 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="51.0" prefWidth="197.0" style="-fx-background-color: #2C344B;" text="הזנת תורנות" textAlignment="CENTER" textFill="WHITE" underline="true">
+                <Button fx:id="addMission" alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#addMissionPage" prefHeight="51.0" prefWidth="197.0" style="-fx-background-color: #2C344B;" text="הזנת תורנות" textAlignment="CENTER" textFill="WHITE" underline="true">
                     <font>
                         <Font name="Alef Regular" size="24.0" />
                     </font>
@@ -41,7 +41,7 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="51.0" prefWidth="132.0" style="-fx-background-color: #2C344B;" text="חיפוש" textAlignment="CENTER" textFill="WHITE">
+                <Button fx:id="adminSearch" alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#adminSearchPage" prefHeight="51.0" prefWidth="132.0" style="-fx-background-color: #2C344B;" text="חיפוש" textAlignment="CENTER" textFill="WHITE">
                     <font>
                         <Font name="Alef Regular" size="24.0" />
                     </font>
@@ -53,7 +53,7 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="51.0" prefWidth="141.0" style="-fx-background-color: #2C344B;" text="מודעות" textAlignment="CENTER" textFill="WHITE">
+                <Button fx:id="adminMessages" alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#adminMessagePage" prefHeight="51.0" prefWidth="141.0" style="-fx-background-color: #2C344B;" text="מודעות" textAlignment="CENTER" textFill="WHITE">
                     <font>
                         <Font name="Alef Regular" size="24.0" />
                     </font>
@@ -65,7 +65,7 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="51.0" prefWidth="237.0" style="-fx-background-color: #2C344B;" text="עריכת תורנות" textAlignment="CENTER" textFill="WHITE">
+                <Button fx:id="editMission" alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#editMissionPage" prefHeight="51.0" prefWidth="237.0" style="-fx-background-color: #2C344B;" text="עריכת תורנות" textAlignment="CENTER" textFill="WHITE">
                     <font>
                         <Font name="Alef Regular" size="24.0" />
                     </font>
