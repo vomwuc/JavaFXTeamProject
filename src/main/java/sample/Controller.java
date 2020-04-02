@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -31,6 +33,26 @@ public class Controller implements Initializable {
     public Button adminSearch;
     @FXML
     public Button adminMessages;
+    @FXML
+    public DatePicker endDate;
+    @FXML
+    public DatePicker startDate;
+    @FXML
+    public ComboBox constraint;
+    @FXML
+    public DatePicker missionStartDate;
+    @FXML
+    public DatePicker missionEndDate;
+    @FXML
+    public DatePicker constraintEndDate;
+    @FXML
+    public DatePicker constraintStartDate;
+    @FXML
+    public ComboBox mission;
+    @FXML
+    public Button saveAndCalculate;
+    @FXML
+    public Button anotherMission;
 
     @FXML
     private Button home;
@@ -93,6 +115,13 @@ public class Controller implements Initializable {
 //        stage = (Stage) rootPane.getScene().getWindow();
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/adminScreens/editMission.fxml"));
         rootPane.getChildren().setAll(pane);
+    }
+
+    public void clear(ActionEvent event) {
+        missionStartDate.getEditor().clear();
+        missionEndDate.getEditor().clear();
+        mission.setValue(null);
+
     }
 
     @Override

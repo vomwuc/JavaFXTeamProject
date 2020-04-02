@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="663.0" style="-fx-background-color: #2C344B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="663.0" style="-fx-background-color: #2C344B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddMissionController">
     <children>
         <VBox alignment="TOP_RIGHT" layoutX="452.0" layoutY="25.0" prefHeight="265.0" prefWidth="211.0" style="-fx-background-color: #2C344B;">
             <children>
@@ -81,7 +81,7 @@
         </VBox>
         <VBox layoutX="103.0" layoutY="58.0" prefHeight="24.0" prefWidth="152.0">
             <children>
-                <ComboBox nodeOrientation="RIGHT_TO_LEFT" prefWidth="150.0" promptText="בחר">
+                <ComboBox fx:id="mission" nodeOrientation="RIGHT_TO_LEFT" prefWidth="150.0" promptText="בחר">
                    <items>
                       <FXCollections fx:factory="observableArrayList">
                          <String fx:value="ק.תורן" />
@@ -137,7 +137,7 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <ComboBox layoutX="105.0" layoutY="289.0" nodeOrientation="RIGHT_TO_LEFT" prefWidth="150.0" promptText="בחר">
+        <ComboBox fx:id="reserve" layoutX="105.0" layoutY="289.0" nodeOrientation="RIGHT_TO_LEFT" prefWidth="150.0" promptText="בחר">
             <items>
                 <FXCollections fx:factory="observableArrayList">
                    <String fx:value="0" />
@@ -152,10 +152,10 @@
                 </FXCollections>
             </items>
         </ComboBox>
-        <Button layoutX="359.0" layoutY="343.0" mnemonicParsing="false" style="-fx-background-color: #14f0f4" text="נקה" textAlignment="RIGHT" />
-        <Button layoutX="125.0" layoutY="343.0" mnemonicParsing="false" style="-fx-background-color: #14f0f4" text="שמור ושבץ" />
-        <Button layoutX="234.0" layoutY="343.0" mnemonicParsing="false" style="-fx-background-color: #14f0f4" text="תורנות נוספת" />
-        <DatePicker layoutX="291.0" layoutY="196.0" />
-        <DatePicker layoutX="81.0" layoutY="196.0" />
+        <Button fx:id="clear" layoutX="359.0" layoutY="343.0" mnemonicParsing="false" style="-fx-background-color: #14f0f4" text="נקה" onAction="#clear" textAlignment="RIGHT" />
+        <Button fx:id="saveAndCalculate" layoutX="125.0" layoutY="343.0" mnemonicParsing="false" style="-fx-background-color: #14f0f4" text="שמור ושבץ" />
+        <Button fx:id="anotherMission" layoutX="234.0" layoutY="343.0" mnemonicParsing="false" style="-fx-background-color: #14f0f4" text="תורנות נוספת" />
+        <DatePicker fx:id="missionStartDate" layoutX="291.0" layoutY="196.0" />
+        <DatePicker  fx:id="missionEndDate" layoutX="81.0" layoutY="196.0" />
     </children>
 </AnchorPane>

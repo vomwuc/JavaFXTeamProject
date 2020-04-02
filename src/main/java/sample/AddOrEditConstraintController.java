@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AddMissionController implements Initializable {
+public class AddOrEditConstraintController implements Initializable {
 
     @FXML
     public Button search;
@@ -39,6 +39,14 @@ public class AddMissionController implements Initializable {
     @FXML
     public ComboBox reserve;
     @FXML
+    public ComboBox constraint;
+    @FXML
+    public ComboBox constraintNumber;
+    @FXML
+    public DatePicker constraintStartDate;
+    @FXML
+    public DatePicker constraintEndDate;
+    @FXML
     private Button home;
 
     @FXML
@@ -60,41 +68,27 @@ public class AddMissionController implements Initializable {
         rootPane.getChildren().setAll(pane);
     }
 
-    public void adminSearchPage(ActionEvent event) throws IOException {
-//        stage = (Stage) rootPane.getScene().getWindow();
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/adminScreens/adminSearch.fxml"));
-        rootPane.getChildren().setAll(pane);
-    }
-
     public void messagePage(ActionEvent event) throws IOException {
 //        stage = (Stage) rootPane.getScene().getWindow();
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/userScreens/messages.fxml"));
         rootPane.getChildren().setAll(pane);
     }
 
-    public void adminMessagePage(ActionEvent event) throws IOException {
+    public void addConstraintPage(ActionEvent event) throws IOException {
 //        stage = (Stage) rootPane.getScene().getWindow();
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/adminScreens/adminMessages.fxml"));
-        rootPane.getChildren().setAll(pane);
-    }
-
-    public void addMissionPage(ActionEvent event) throws IOException {
-//        stage = (Stage) rootPane.getScene().getWindow();
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/userScreens/addMission.fxml"));
-        rootPane.getChildren().setAll(pane);
-    }
-
-    public void editMissionPage(ActionEvent event) throws IOException {
-//        stage = (Stage) rootPane.getScene().getWindow();
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/adminScreens/editMission.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/userScreens/messages.fxml"));
         rootPane.getChildren().setAll(pane);
     }
 
     public void clear(ActionEvent event) {
-        missionStartDate.getEditor().clear();
-        missionEndDate.getEditor().clear();
-        mission.setValue(null);
-        reserve.setValue(null);
+        constraintStartDate.getEditor().clear();
+        constraintEndDate.getEditor().clear();
+        constraint.setValue(null);
+        constraintNumber.setValue(null);
+    }
+
+    public void delete(ActionEvent event) {
+
     }
 
     @Override
