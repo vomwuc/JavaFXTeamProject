@@ -2,6 +2,7 @@ package screens;
 
 import javafx.application.Application;
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -99,6 +100,7 @@ public class LoginScreen extends Application {
 
         bp.setTop(hb);
         bp.setCenter(gridPane);
+
 
         Scene scene = new Scene(bp);
         scene.getStylesheets().add(getClass().getClassLoader().getResource("login.css").toExternalForm());

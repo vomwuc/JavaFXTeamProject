@@ -32,7 +32,7 @@ public class AdminLoginScreen {
 
         //Adding HBox
         HBox hb = new HBox();
-        hb.setPadding(new Insets(20,20,20,30));
+        hb.setPadding(new Insets(20,20,`20,30));
 
         //Adding GridPane
         GridPane gridPane = new GridPane();
