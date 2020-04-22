@@ -24,11 +24,10 @@ public class LoginUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
-//        primaryStage.setTitle("Missions");
 
         primaryStage.setScene(new Scene(root,
-                width,
-                height,
+                width*APPLICATION_SCALE,
+                height*APPLICATION_SCALE,
                 Color.grayRgb(25)));
         primaryStage.setX(0);
         primaryStage.setY(0);
