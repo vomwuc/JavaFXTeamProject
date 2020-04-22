@@ -89,6 +89,8 @@ public class LoginScreen extends Application {
             if (checkUser.equals(user)) {
                 lblMessage.setText("Congratulations!");
                 lblMessage.setTextFill(Color.GREEN);
+                User.getInstacne().setPersonalNumber(checkUser);
+                User.getInstacne().setAdmin(false);
 //                User.getInstacne().setPersonalNumber(checkUser);
                 loginUtils.moveToHomePage(primaryStage);
             } else {

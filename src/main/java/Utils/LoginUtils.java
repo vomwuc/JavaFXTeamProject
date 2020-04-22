@@ -5,6 +5,7 @@ import javafx.geometry.NodeOrientation;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.awt.*;
@@ -26,8 +27,8 @@ public class LoginUtils {
         }
 
         primaryStage.setScene(new Scene(root,
-                width*APPLICATION_SCALE,
-                height*APPLICATION_SCALE,
+                Screen.getPrimary().getBounds().getWidth() * APPLICATION_SCALE ,
+                Screen.getPrimary().getBounds().getHeight() * APPLICATION_SCALE,
                 Color.grayRgb(25)));
         primaryStage.setX(0);
         primaryStage.setY(0);

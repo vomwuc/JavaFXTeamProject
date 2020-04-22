@@ -7,7 +7,7 @@ public class User {
     Boolean isAdmin;
 
     public static User getInstacne() {
-        if(userInstance != null) {
+        if(userInstance == null) {
             userInstance = new User();
         }
 

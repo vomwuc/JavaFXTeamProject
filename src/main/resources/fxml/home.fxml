@@ -30,11 +30,11 @@
                   <Insets bottom="20.0" />
                </VBox.margin>
             </Label>
-            <Button fx:id="btnOverview" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="דף הבית" textFill="#e7e5e5">
+            <Button fx:id="btnOverview" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="342.0" stylesheets="@../style.css" text="דף הבית" textFill="#e7e5e5">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/icons8_Home_32px.png" />
+                        <Image url="@../icons/house.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -48,67 +48,103 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
-            <Button fx:id="btnConst" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="אילוצים" textFill="#e7e5e5">
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/icons8_Open_Envelope_32px.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <padding>
-                  <Insets left="50.0" />
-               </padding>
-            </Button>
-            <Button fx:id="btnSearch" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="257.0" stylesheets="@../style.css" text="חיפוש" textFill="#e7e5e5">
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/icons8_Person_32px.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <padding>
-                  <Insets left="50.0" />
-               </padding>
-            </Button>
-            <Button fx:id="btnMessages" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="מודעות" textFill="#e7e5e5">
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/icons8_Xbox_Menu_32px.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <padding>
-                  <Insets left="50.0" />
-               </padding>
-            </Button>
-            <Button fx:id="btnPackages" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="מנהל" textFill="#e7e5e5">
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/icons8_Box_32px.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <padding>
-                  <Insets left="50.0" />
-               </padding>
-            </Button>
-            <Button fx:id="btnSettings" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="מנהל" textFill="#e7e5e5">
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/icons8_Slider__32px.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <padding>
-                  <Insets left="50.0" />
-               </padding>
-            </Button>
-            <Button fx:id="btnSignout" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#close" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="יציאה" textFill="#e7e5e5">
+            <AnchorPane>
+               <children>
+                  <VBox fx:id="vboxUser" alignment="TOP_CENTER" cache="true" layoutY="168.0" prefHeight="161.0" prefWidth="271.0" AnchorPane.bottomAnchor="133.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button fx:id="btnMessages" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="367.0" stylesheets="@../style.css" text="מודעות" textFill="#e7e5e5">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/email.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnConst" alignment="TOP_CENTER" centerShape="false" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="32.0" prefWidth="305.0" stylesheets="@../style.css" text="אילוצים" textFill="#e7e5e5">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/thumbtack.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnSearch" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="438.0" stylesheets="@../style.css" text="חיפוש" textFill="#e7e5e5">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/loupe%20(2).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vboxAdmin" alignment="TOP_CENTER" prefHeight="294.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button fx:id="btnAdminMessages" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="360.0" stylesheets="@../style.css" text="מודעות" textFill="#e7e5e5">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/email.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnAdminAddMission" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="342.0" stylesheets="@../style.css" text="הזנת תורנות" textFill="#e7e5e5">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/thumbtack.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnAdminEditMission" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="324.0" stylesheets="@../style.css" text="עריכת תורנות" textFill="#e7e5e5">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/edit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnAdminSearch" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="334.0" stylesheets="@../style.css" text="חיפוש" textFill="#e7e5e5">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/loupe%20(2).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Button fx:id="btnSignout" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#close" prefHeight="44.0" prefWidth="271.0" stylesheets="@../style.css" text="יציאה" textFill="#e7e5e5">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
