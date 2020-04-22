@@ -29,7 +29,7 @@ public class Main extends Application {
 
         HttpClient client = HttpClient.newBuilder().build();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8500/user/"))
+                .uri(URI.create("http://localhost:8500/user"))
                 .POST(HttpRequest.BodyPublishers.ofString(""))
 //                .GET()
                 .build();
