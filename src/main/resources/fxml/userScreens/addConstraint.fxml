@@ -14,7 +14,7 @@
     <children>
         <VBox layoutX="103.0" layoutY="58.0" prefHeight="24.0" prefWidth="152.0">
             <children>
-                <ComboBox nodeOrientation="RIGHT_TO_LEFT" prefWidth="150.0" promptText="בחר">
+                <ComboBox fx:id="constraint" nodeOrientation="RIGHT_TO_LEFT" prefWidth="150.0" promptText="בחר">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
                             <String fx:value="אירוע" />
@@ -55,11 +55,11 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <ComboBox layoutX="28.0" layoutY="254.0" nodeOrientation="RIGHT_TO_LEFT" prefWidth="150.0" promptText="בחר" />
-        <Button layoutX="313.0" layoutY="343.0" mnemonicParsing="false" style="-fx-background-color: #14f0f4" text="נקה" textAlignment="RIGHT" />
-        <Button layoutX="233.0" layoutY="343.0" mnemonicParsing="false" style="-fx-background-color: #14f0f4" text="שמור" />
-        <DatePicker layoutX="285.0" layoutY="145.0" />
-        <DatePicker layoutX="81.0" layoutY="145.0" />
+        <ComboBox fx:id="constraintNumber" layoutX="28.0" layoutY="254.0" nodeOrientation="RIGHT_TO_LEFT" prefWidth="150.0" promptText="בחר" />
+        <Button fx:id="clear" layoutX="313.0" layoutY="343.0" mnemonicParsing="false" style="-fx-background-color: #14f0f4" text="נקה" onAction="#clear" textAlignment="RIGHT" />
+        <Button fx:id="save" layoutX="233.0" layoutY="343.0" mnemonicParsing="false" style="-fx-background-color: #14f0f4" text="שמור" />
+        <DatePicker fx:id="constraintStartDate" layoutX="285.0" layoutY="145.0" />
+        <DatePicker fx:id="constraintEndDate" layoutX="81.0" layoutY="145.0" />
       <Text fill="WHITE" layoutX="20.0" layoutY="343.0" nodeOrientation="RIGHT_TO_LEFT" strokeType="OUTSIDE" strokeWidth="0.0" text="*שים לב כי לאופציית &quot;אחר&quot; יש עדיפות נמוכה והמערכת עלולה לשבץ אותך לתורנות" wrappingWidth="197.0">
          <font>
             <Font size="13.0" />

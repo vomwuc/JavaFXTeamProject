@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import javafx.event.ActionEvent;
@@ -15,7 +16,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class AddMissionController implements Initializable {
 
     @FXML
     public Button search;
@@ -30,30 +31,13 @@ public class Controller implements Initializable {
     @FXML
     public Button editMission;
     @FXML
-    public Button adminSearch;
-    @FXML
-    public Button adminMessages;
-    @FXML
-    public DatePicker endDate;
-    @FXML
-    public DatePicker startDate;
-    @FXML
-    public ComboBox constraint;
-    @FXML
     public DatePicker missionStartDate;
     @FXML
     public DatePicker missionEndDate;
     @FXML
-    public DatePicker constraintEndDate;
-    @FXML
-    public DatePicker constraintStartDate;
-    @FXML
     public ComboBox mission;
     @FXML
-    public Button saveAndCalculate;
-    @FXML
-    public Button anotherMission;
-
+    public ComboBox reserve;
     @FXML
     private Button home;
 
@@ -61,6 +45,7 @@ public class Controller implements Initializable {
     private AnchorPane rootPane;
 
     Stage stage = null;
+
 
     @FXML
     public void display(ActionEvent event) throws IOException {
@@ -93,21 +78,9 @@ public class Controller implements Initializable {
         rootPane.getChildren().setAll(pane);
     }
 
-    public void addConstraintPage(ActionEvent event) throws IOException {
-//        stage = (Stage) rootPane.getScene().getWindow();
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/userScreens/addConstraint.fxml"));
-        rootPane.getChildren().setAll(pane);
-    }
-
-    public void editConstraintPage(ActionEvent event) throws IOException {
-//        stage = (Stage) rootPane.getScene().getWindow();
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/userScreens/editConstraint.fxml"));
-        rootPane.getChildren().setAll(pane);
-    }
-
     public void addMissionPage(ActionEvent event) throws IOException {
 //        stage = (Stage) rootPane.getScene().getWindow();
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/adminScreens/addMission.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/userScreens/addMission.fxml"));
         rootPane.getChildren().setAll(pane);
     }
 
@@ -121,7 +94,7 @@ public class Controller implements Initializable {
         missionStartDate.getEditor().clear();
         missionEndDate.getEditor().clear();
         mission.setValue(null);
-
+        reserve.setValue(null);
     }
 
     @Override
