@@ -4,7 +4,7 @@ public class User {
     private static User userInstance;
 
     String personalNumber;
-    Boolean isAdmin;
+    Boolean isAdmin = false;
 
     public static User getInstacne() {
         if(userInstance == null) {
